@@ -4,7 +4,7 @@ Welcome to our GitHub repository dedicated to tracking the progress of our optic
 
 ## 8/8/23
 
-- Read the manua
+- Read the manual
 - Peeled optical fiber
 - Washed with acetone
 - Cut it using fiber cleaver and blade

@@ -2,7 +2,20 @@
 
 Welcome to our GitHub repository dedicated to tracking the progress of our optical fiber project. Here, we'll be sharing regular updates on our work. Stay tuned to follow our journey in the world of optical fibers.
 
-## Week 1 
+## Work to complete
+
+- [x] Fiber-end Preparation and Light Coupling
+- [x] Numerical Aperture Measurement
+- [ ] Mode Field Diameter of a Single-Mode Fiber
+- [ ] Refractive Index Profile of a Multimode Fiber
+- [ ] Fiber-to-Fiber (Multimode) Splice Loss
+- [ ] Microbending Loss and Application in Sensing
+- [ ] Bend-induced Loss in a Single-Mode Fiber
+- [ ] Fiber Optic Communication System (our plan)
+
+## Updates
+
+### Week 1 
 
 - **Tuesday: 08/08/2023**
   - Read the [manual](manual.pdf)
@@ -19,7 +32,7 @@ Welcome to our GitHub repository dedicated to tracking the progress of our optic
   - Unforeseen complications led to the end of the optical fiber breaking, necessitating a repeat of the peeling, washing, and cutting process.
   - With a focus on preserving accurate light transmission, we intentionally positioned the input and output ends of the optical fiber in separate rows. This strategic arrangement underscored the critical principle that all light emerging from the fiber's end had traversed the entire length of the optical fiber.
 
-## Week 2
+### Week 2
 
 - **Tuesday: 15/08/2023** (Holiday for Independence Day)
 - **Wednesday: 16/08/2023** & **Thursday: 17/08/2023**
@@ -30,3 +43,8 @@ Welcome to our GitHub repository dedicated to tracking the progress of our optic
   - The light coming out of the end of the fiber was making a cone shape. So we put a screen (with a graph paper attached to it) more or less perpendicular to the axis of the cone. We got a circular spot on the  screen. We measured it's diameter. It came out to be 5.4cm. Next we moved the screen and noted the distance moved (6cm) and took another reading where the circle was bigger (8.4cm). We have attached the picture of the graph paper in [image 2](#week2-graph1).
   <img src="images/week2_graph1.jpg" alt="distances marked on graph paper" style="width: 75%; display: block; margin-left: auto; margin-right: auto;" id="week2-graph1">
 
+### Week 3
+
+- **Tuesday: 22/08/2023**
+  - sjnjksc
+  - vfsvsd

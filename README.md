@@ -35,16 +35,19 @@ Welcome to our GitHub repository dedicated to tracking the progress of our optic
 ### Week 2
 
 - **Tuesday: 15/08/2023** (Holiday for Independence Day)
-- **Wednesday: 16/08/2023** & **Thursday: 17/08/2023**
+- **Wednesday: 16/08/2023**
   - Previously we were using a holding stand for the laser which was not suitable for our experiment. So we decided to use a different stand which was better suitable for our experiment with XYZ axis movement.
   - Then  we checked the amount of light coming out of the fiber using a intensity sensor (photo diode). We measured the intensity of the light coming directly from the laser (400mv) and then we measured the intensity of the light coming out of the fiber (260mv). The intensity values are in millivolts because we were using a multimeter to measure the electricity produced by the photo diode. From the values we can say that we have a good 65% of the incident light coming out of the fiber on the other hand. We thought this is a good enough value accounting for the presence of various absorbing impurities in the lens and the air in the room. Moreover, the lights which are falling above a particular angle not getting transmitted through the fiber. Thus our next job was to find out the maximum angle which the light can make with the fiber axis and still get transmitted through the fiber.
   <img src="images/week2_scematics1.png" alt="Illustration of measured values" style="width: 75%; display: block; margin-left: auto; margin-right: auto;" id="week2-scematics1">
   - In [image 1](#week2-scematics1) we have shown the schematic of the experiment.
   - The light coming out of the end of the fiber was making a cone shape. So we put a screen (with a graph paper attached to it) more or less perpendicular to the axis of the cone. We got a circular spot on the  screen. We measured it's diameter. It came out to be 5.4cm. Next we moved the screen and noted the distance moved (6cm) and took another reading where the circle was bigger (8.4cm). We have attached the picture of the graph paper in [image 2](#week2-graph1).
   <img src="images/week2_graph1.jpg" alt="distances marked on graph paper" style="width: 75%; display: block; margin-left: auto; margin-right: auto;" id="week2-graph1">
+- **Thursday: 17/08/2023**
+  - @LuminAYUSH put calculations here
+
 
 ### Week 3
 
 - **Tuesday: 22/08/2023**
-  - sjnjksc
-  - vfsvsd
+  - We saw that expt 3 (Mode Field Diameter of a Single-Mode Fiber) needed a single mode fiber. We wanted to complete all the ones which needed a multimode fiber first. So we decided to do expt 4 (Refractive Index Profile of a Multimode Fiber) next.
+  - For Expt 4, we needed a Tungsten Halogen Lamp (THL). We didn't have that, so we requested the lab in-charge to arrange one for us. He gave us one which was not working. So he said he will try to arrange one for us by tomorrow from the solid state lab solar experiment. We saw that the power supply was working fine.

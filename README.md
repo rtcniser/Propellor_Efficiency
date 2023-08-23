@@ -15,7 +15,7 @@ Welcome to our GitHub repository dedicated to tracking the progress of our optic
 
 ## Updates
 
-### Week 1 
+### Week 1
 
 - **Tuesday: 08/08/2023**
   - Read the [manual](manual.pdf)
@@ -43,11 +43,18 @@ Welcome to our GitHub repository dedicated to tracking the progress of our optic
   - The light coming out of the end of the fiber was making a cone shape. So we put a screen (with a graph paper attached to it) more or less perpendicular to the axis of the cone. We got a circular spot on the  screen. We measured it's diameter. It came out to be 5.4cm. Next we moved the screen and noted the distance moved (6cm) and took another reading where the circle was bigger (8.4cm). We have attached the picture of the graph paper in [image 2](#week2-graph1).
   <img src="images/week2_graph1.jpg" alt="distances marked on graph paper" style="width: 75%; display: block; margin-left: auto; margin-right: auto;" id="week2-graph1">
 - **Thursday: 17/08/2023**
-  - @LuminAYUSH put calculations here
+  - We know that $\text{NA} = \sin{\theta}$. From [image 1](#week2-scematics1) we see that $\tan \theta = \frac{(8.4 - 5.4)/2}{6} = 0.5$.
+  $\therefore \text{NA} = \sin \theta = \frac{0.5}{\sqrt{1 + 0.5^2}} = 0.447$
+
+  **Note:** The work done on Wednesday was actually done on both Wednesday and Thursday, but for the sake of simplicity we have mentioned it all under Wednesday.
 
 
 ### Week 3
 
 - **Tuesday: 22/08/2023**
-  - We saw that expt 3 (Mode Field Diameter of a Single-Mode Fiber) needed a single mode fiber. We wanted to complete all the ones which needed a multimode fiber first. So we decided to do expt 4 (Refractive Index Profile of a Multimode Fiber) next.
+  - We saw that Expt 3 (Mode Field Diameter of a Single-Mode Fiber) needed a single mode fiber. We wanted to complete all the ones which needed a multimode fiber first. So we decided to do Expt 4 (Refractive Index Profile of a Multimode Fiber) next.
   - For Expt 4, we needed a Tungsten Halogen Lamp (THL). We didn't have that, so we requested the lab in-charge to arrange one for us. He gave us one which was not working. So he said he will try to arrange one for us by tomorrow from the solid state lab solar experiment. We saw that the power supply was working fine.
+- **Wednesday: 23/08/2023**
+  - We investigated the lamp and found that it was fused. We were told that we don't have spare parts for the lamp. We explored a lot of possibilities to find a replacement option for the Lamp. Any **non-coherent** light source would work. We thought about getting a sodium lamp from the optics lab and a lens to converge the beam to a point. While searching for those items we came to know that the optics lab has spare parts for our lamp. So we replaced the fused bulb with a new one and the lamp started working. Yay!
+  - We also got a new smaller stand for the lamp because Swayam took the one which we were using. The new one although not ideal for our case, was good enough for our experiment.
+  - We then set the lamp up and found out that just like the lazer, this lamp is also getting us around 60% transmission through the optical fiber ($\frac{0.3V}{0.51V}\times 100 \% \approx 60\%$)

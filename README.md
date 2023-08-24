@@ -57,4 +57,8 @@ Welcome to our GitHub repository dedicated to tracking the progress of our optic
 - **Wednesday: 23/08/2023**
   - We investigated the lamp and found that it was fused. We were told that we don't have spare parts for the lamp. We explored a lot of possibilities to find a replacement option for the Lamp. Any **non-coherent** light source would work. We thought about getting a sodium lamp from the optics lab and a lens to converge the beam to a point. While searching for those items we came to know that the optics lab has spare parts for our lamp. So we replaced the fused bulb with a new one and the lamp started working. Yay!
   - We also got a new smaller stand for the lamp because Swayam took the one which we were using. The new one although not ideal for our case, was good enough for our experiment.
-  - We then set the lamp up and found out that just like the lazer, this lamp is also getting us around 60% transmission through the optical fiber ($\frac{0.3V}{0.51V}\times 100 \% \approx 60\%$)
+  - We then set the lamp up and found out that just like the laser, this lamp is also getting us around 60% transmission through the optical fiber ($\frac{0.3V}{0.51V}\times 100 \% \approx 60\%$)
+- **Thursday: 24/08/2023**
+  - Oh No! the fiber end broke again! 😢 Again had to do the peeling, washing and cutting process.
+  - We found that, most of the apparatus required for the remaining experiments is either missing or broken. So, in the end we decided to design and build our own experiment. We will be using the lab's apparatus only for the experiments which we have already done.
+  - So, now we are going to try to build a communication device using signal transmission through the optical fibre as our final project. For now, we are planning to use the lab's apparatus and arrange some LEDs and photo diodes to transmit and receive the signal. We will be controlling our signal using an Arduino.

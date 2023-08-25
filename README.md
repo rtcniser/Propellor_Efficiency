@@ -6,12 +6,12 @@ Welcome to our GitHub repository dedicated to tracking the progress of our optic
 
 - [x] Fiber-end Preparation and Light Coupling
 - [x] Numerical Aperture Measurement
-- [ ] Mode Field Diameter of a Single-Mode Fiber
-- [ ] Refractive Index Profile of a Multimode Fiber
-- [ ] Fiber-to-Fiber (Multimode) Splice Loss
-- [ ] Microbending Loss and Application in Sensing
-- [ ] Bend-induced Loss in a Single-Mode Fiber
-- [ ] Fiber Optic Communication System (our plan)
+- [x] ~~Mode Field Diameter of a Single-Mode Fiber~~
+- [x] ~~Refractive Index Profile of a Multimode Fiber~~
+- [x] ~~Fiber-to-Fiber (Multimode) Splice Loss~~
+- [x] ~~Microbending Loss and Application in Sensing~~
+- [x] ~~Bend-induced Loss in a Single-Mode Fiber~~
+- [ ] **Fiber Optic Communication System (our plan)**
 
 ## Updates
 

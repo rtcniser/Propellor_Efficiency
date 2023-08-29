@@ -73,7 +73,7 @@ Welcome to our GitHub repository dedicated to tracking the progress of our optic
   - Next we connected the LED to the constant 5V pin of the arduino and connected the photodioe to the analog pin A0 of the arduino. We wrote a simple code to read the voltage at A0 and print it to the serial monitor. The code is given below:
   <br>
 
-  ```arduino
+  ```cpp
   
   void setup() {
     pinMode(A0, INPUT);

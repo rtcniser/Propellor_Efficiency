@@ -59,6 +59,31 @@ Welcome to our GitHub repository dedicated to tracking the progress of our optic
   - We also got a new smaller stand for the lamp because Swayam took the one which we were using. The new one although not ideal for our case, was good enough for our experiment.
   - We then set the lamp up and found out that just like the laser, this lamp is also getting us around 60% transmission through the optical fiber ($\frac{0.3V}{0.51V}\times 100 \% \approx 60\%$)
 - **Thursday: 24/08/2023**
-  - Oh No! the fiber end broke again! 😢 Again had to do the peeling, washing and cutting process.
+  - Oh No! the fiber end broke again! Again had to do the peeling, washing and cutting process.
   - We found that, most of the apparatus required for the remaining experiments is either missing or broken. So, in the end we decided to design and build our own experiment. We will be using the lab's apparatus only for the experiments which we have already done.
   - So, now we are going to try to build a communication device using signal transmission through the optical fibre as our final project. For now, we are planning to use the lab's apparatus and arrange some LEDs and photo diodes to transmit and receive the signal. We will be controlling our signal using an Arduino.
+
+### Week 4
+
+- **Tuesday: 29/08/2023**
+  - We took a white led, and a 220 ohm resistor and an Arduino for our experiment.
+  - We soldered the resistance to the long terminal of the led, and attached long red and black wires at both ends of the leds.
+  - We attached the LED to the lens and focussed the light on one end of the fiber. On the other end we connected a photodiode which we got from the other lab. The LED being small, this time the intensity of the light was very low. Using multimeter we measured it to be around 50mv. Although at first we thought that this intensity is too low, later we found out that there was a clear distiction between the voltage when the LED was on and when it was off. So we decided to go ahead with this setup.
+
+  - Next we connected the LED to the constant 5V pin of the arduino and connected the photodioe to the analog pin A0 of the arduino. We wrote a simple code to read the voltage at A0 and print it to the serial monitor. The code is given below:
+  <br>
+
+  ```arduino
+  
+  void setup() {
+    pinMode(A0, INPUT);
+    Serial.begin(9600);
+  }
+  
+  void loop() {
+    Serial.println(analogRead(A0));
+    delay(100);
+  }
+  ```
+
+  - Now we saw that the analog pin is giving us a value of 31-32 when the LED is glowing and the value is almost 0 when the LED is off. So we thought that we can differentiate between 0 and 1 with 20 as a good threshold value.

@@ -1,14 +1,15 @@
 from pyfirmata import Arduino
 import time
 
-board = Arduino('COM7')
+board = Arduino('COM3')
 LED = board.get_pin('d:13:o')
 DURATION = 2  # length of one bit in seconds
 PAUSE = 0.2  # length of pause to ensure uniformity
 
 
 def one_bit(LED, bit):
-    n = DURATION // PAUSE
+    print("1" if bit else "0", end = "")
+    n = int (DURATION // PAUSE) + 1
     arr =  [1] * (3*n//4) + [0] * (n//4 + 1) if bit else [1] * (n//4 + 1) + [0] * (3*n//4)
     for i in arr:
         LED.write(i)
@@ -27,6 +28,6 @@ def send(string):
         one_bit(LED, char == "1")
 
 while True:
-    text = input("Enter text to send: ")
+    text = input("\nEnter text to send: ")
     binary = string_to_binary(text)
     send(binary)

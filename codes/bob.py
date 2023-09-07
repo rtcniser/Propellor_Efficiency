@@ -1,10 +1,11 @@
 from pyfirmata import Arduino
 import time
 
+
 board = Arduino('COM3')
 LED = board.get_pin('d:13:o')
-DURATION = 2  # length of one bit in seconds
-PAUSE = 0.2  # length of pause to ensure uniformity
+DURATION = 0.01 # length of one bit in seconds
+PAUSE = DURATION/10  # length of pause to ensure uniformity
 
 
 def one_bit(LED, bit):
@@ -16,7 +17,7 @@ def one_bit(LED, bit):
         time.sleep(PAUSE)
         
 def string_to_binary(input_string):
-    binary_string = ""
+    binary_string = "00001"
     for char in input_string:
         # Convert the character to its ASCII value and then to an 8-bit binary string
         binary_char = format(ord(char), '08b')
@@ -30,4 +31,6 @@ def send(string):
 while True:
     text = input("\nEnter text to send: ")
     binary = string_to_binary(text)
+    to = time.time()
     send(binary)
+    print(f"\nTime taken: {(time.time() - to):.2f} s")

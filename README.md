@@ -91,3 +91,7 @@ Welcome to our GitHub repository dedicated to tracking the progress of our optic
 - **Wednesday and Thursday: 30-31/08/2023**
   - We tried to write the code for both encoder and decoder using Arduino Ide language but it was new so we couldn't do it. So we decided to use python for the same. We wrote the code for both encoder and decoder in python. The current version of the code can be find in the same repository.
   - To translate python code to arduino, we used the Firmata library. We installed the library in the arduino IDE and uploaded the Standard Firmata code to the arduino.
+
+### Week 5
+
+- **Tuesday: 05/09/2023**

@@ -38,12 +38,12 @@ Welcome to our GitHub repository dedicated to tracking the progress of our optic
 - **Wednesday: 16/08/2023**
   - Previously we were using a holding stand for the laser which was not suitable for our experiment. So we decided to use a different stand which was better suitable for our experiment with XYZ axis movement.
   - Then  we checked the amount of light coming out of the fiber using a intensity sensor (photo diode). We measured the intensity of the light coming directly from the laser (400mv) and then we measured the intensity of the light coming out of the fiber (260mv). The intensity values are in millivolts because we were using a multimeter to measure the electricity produced by the photo diode. From the values we can say that we have a good 65% of the incident light coming out of the fiber on the other hand. We thought this is a good enough value accounting for the presence of various absorbing impurities in the lens and the air in the room. Moreover, the lights which are falling above a particular angle not getting transmitted through the fiber. Thus our next job was to find out the maximum angle which the light can make with the fiber axis and still get transmitted through the fiber.
-  <img src="images/week2_scematics1.png" alt="Illustration of measured values" style="width: 75%; display: block; margin-left: auto; margin-right: auto;" id="week2-scematics1">
-  - In [image 1](#week2-scematics1) we have shown the schematic of the experiment.
+  <img src="images/week2_schematics1.png" alt="Illustration of measured values" style="width: 75%; display: block; margin-left: auto; margin-right: auto;" id="week2-schematics1">
+  - In [image 1](#week2-schematics1) we have shown the schematic of the experiment.
   - The light coming out of the end of the fiber was making a cone shape. So we put a screen (with a graph paper attached to it) more or less perpendicular to the axis of the cone. We got a circular spot on the  screen. We measured it's diameter. It came out to be 5.4cm. Next we moved the screen and noted the distance moved (6cm) and took another reading where the circle was bigger (8.4cm). We have attached the picture of the graph paper in [image 2](#week2-graph1).
   <img src="images/week2_graph1.jpg" alt="distances marked on graph paper" style="width: 75%; display: block; margin-left: auto; margin-right: auto;" id="week2-graph1">
 - **Thursday: 17/08/2023**
-  - We know that $\text{NA} = \sin{\theta}$. From [image 1](#week2-scematics1) we see that $\tan \theta = \frac{(8.4 - 5.4)/2}{6} = 0.5$.
+  - We know that $\text{NA} = \sin{\theta}$. From [image 1](#week2-schematics1) we see that $\tan \theta = \frac{(8.4 - 5.4)/2}{6} = 0.5$.
   $\therefore \text{NA} = \sin \theta = \frac{0.5}{\sqrt{1 + 0.5^2}} = 0.447$
 
   **Note:** The work done on Wednesday was actually done on both Wednesday and Thursday, but for the sake of simplicity we have mentioned it all under Wednesday.
@@ -86,12 +86,29 @@ Welcome to our GitHub repository dedicated to tracking the progress of our optic
   }
   ```
 
-  - Now we saw that the analog pin is giving us a value of 31-32 when the LED is glowing and the value is almost 0 when the LED is off. So we thought that we can differentiate between 0 and 1 with 20 as a good threshold value.
+  - Now we saw that the analog pin is giving us a value of 31-32 when the LED is glowing and the value is almost 0 when the LED is off. So we thought that we can differentiate between 0 and 1 with 4 as a good threshold value.
 
 - **Wednesday and Thursday: 30-31/08/2023**
-  - We tried to write the code for both encoder and decoder using Arduino Ide language but it was new so we couldn't do it. So we decided to use python for the same. We wrote the code for both encoder and decoder in python. The current version of the code can be find in the same repository.
-  - To translate python code to arduino, we used the Firmata library. We installed the library in the arduino IDE and uploaded the Standard Firmata code to the arduino.
+  - We tried to write the code for both sender and reciever using Arduino language but it was new to us, we couldn't do it. So we decided to use python for the same. We wrote the code for both sender and reciever in python. The current version of the code can be found in this same repository. Although it is not working properly yet.
+  - To make Python talk to arduino, we used the Firmata library. We installed the library in the arduino IDE and uploaded the Standard Firmata code to the arduino. Python will talk to the arduino using the I2C Serial communication protocol, the Standard Firmata program helps the arduino to recieve and decipher the command sent from Python.
 
 ### Week 5
 
-- **Tuesday: 05/09/2023**
+(We are writing this updates later, and we forgot exactly on which day we did what)
+
+- **AIM:** There would be two ends, one would encode and send the signal (Bob) and the other would receive and decode the signal (Alice). In Bob's side, the program would prompt the user for a message (a string of characters). The program would then convert it to 0s and 1s. Each character will contribute 8 bits to the message. Then the sender will somehow modulate the signal and send it through the optical fiber. In Alice's side, the program would receive the signal, demodulate, decode and print the message on the screen.
+- We started correcting the previous code, and started realising certain flaws in our modulating plans. So our initial plan was to just keep the LED on for `t` time if there is a 1, and keep it off for `t` time if there is a 0. But we realised that if there are multiple 0s or 1s in a row, then Alice would not be able to distinguish between them unless Alice knows the value of `t` also. But due to error and noise in the system, from Bob's end, the practical value of `t` might not remain same all over the message. Then Alice would not be able to decode the message properly.
+- So we decided to use a different, more robust modulating scheme. The new way should work without Alice knowing how fast Bob is sending the message as long as Bob's speed is under a certain threshold set by hardware limitation. Bob can even change speeds mid signal.
+- **The New Method:**
+  - **Bob** would set the speed (regulated by a value `t` ). `t` represents the time length of 1 bit of message. Now, at the start of every bit, Bob would turn the LED on. Now, if the bit is supposed to be a 0, he will turn the LED off after `t/4` time and keep it off for the rest `3t/4` time of the bit. If the bit is supposed to be a 1, he will keep the LED on for `3t/4` time and turn it off for the rest `t/4` time. Thus in a bit, if it is kept on for more time, it is a 1, and if it is kept off for more time, it is a 0. A jump from 0 to 1 marks the start of a bit.
+  - **Alice** takes reading in a muuch faster rate. Suppose she takes reading every `t/n` time (where n is a large number... maybe 100 or 200). Now, she just keeps on noting the values she reads: if the voltage is greater than a certain threshold, she notes it as 1, otherwise she notes it as 0. Thus for for every bit sent by Bob, alice would have about `n` readings. Now, she knows that the light glowing from 0 to 1 denotes the start of a bit. With this information, she can split the whole noted text into bits of `n` lengthed chunks. Each of these chunks are of the form `1*0*` (i.e: starts with 1s, followed by 0s). Now, she just needs to count the number of 1s and 0s in each chunk; if there are more 1s, then the bit is 1, otherwise it is 0.
+  - This modulation is known as **Pulse Width Modulation (PWM)** and is explained in [image 3](#week5-schematics1).
+
+  <img src="images/week5_schematics1.png" alt="Illustration of Modulation Method" style="width: 100%; display: block; margin-left: auto; margin-right: auto;" id="week5-schematics1">
+
+### Week 6
+
+This week we experimented with adversaries:
+
+- **Speed:** First removed the `sleep()` from Alice's code and made her read at the speed limited by hardware. Although it increases the number of readings per second by 100 times or more, but the number of readings per second varies a lot. But our modulation method is robust enough to handle this. Then we tried to increase the speed of Bob by decreasing the value of `t`. **Observation:** In Bob, we cannot remove the `sleep()` because it is needed to keep the LED on for the required time. So we went to the limit of the `sleep()` function (about 10ms... approximately this is how long sending 1 bit takes) and found that Alice was still able to decode the message properly. So we can say that our method is robust enough to handle speed variations.
+- **Intensity:** We tried changing the intensity of the LED. For doing that our first plan was to programmatically control the potential provided to the LED from the `pyFirmata` alternative to the `analogWrite()` command. This caused problems because arduino `GPIO` pins are not capable of giving analog voltage, so they simulate it with PWM output. That PWM would completely change our intended waveform. We could have used an appropriate capacitor which would filter out their PWM frequency but let our frequency to pass. But using capacitor also had it's problems. The Arduino PWM frequency and our Frequency were too close to each other. It was difficult to get the exact value capacitor. Even if we did, it won't completely smooth out the Arduino signal, and it will also decrease the responsiveness of our LED. So we just used an external potentiometer to regulate the voltage accross the LED. The full voltage was 5V initially, but with decreasing voltage, we found that the system had problem in communication below 3V (even after tweaking the threshold value in Alice). All this while we used a 25cm long multimode optical fiber. **Observation:** We found that the system was robust enough to handle intensity variations.

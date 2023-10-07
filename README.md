@@ -11,7 +11,7 @@ Welcome to our GitHub repository dedicated to tracking the progress of our optic
 - ❌ ~~Fiber-to-Fiber (Multimode) Splice Loss~~
 - ❌ ~~Microbending Loss and Application in Sensing~~
 - ❌ ~~Bend-induced Loss in a Single-Mode Fiber~~
-- **Fiber Optic Communication System** (Final Plan Proposed by us because the apparatus for doing the remaining experiments were either unavailable or broken)
+- ✅ **Fiber Optic Communication System** (Final Plan Proposed by us because the apparatus for doing the remaining experiments were either unavailable or broken)
 
 ## Updates
 

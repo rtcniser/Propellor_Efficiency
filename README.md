@@ -2,5 +2,5 @@
 
 ## Sem 7
 
-- [Optical Fiber](./OpticalFiber)
-- [Fourier Optics](./FourierOptics)
+- [Optical Fiber](./OpticalFiber) (before midsem)
+- [Fourier Optics](./FourierOptics) (after midsem)

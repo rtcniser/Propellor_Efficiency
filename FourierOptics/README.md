@@ -34,23 +34,6 @@ Just read the manual and got acquainted with the idea of the experiment.
 
 ### Week 4
 
-<!--
-We have pictures for:
-
-- Fourier Transform of pin hole - 5.jpg
-- 
-- Fourier Transform of double slit - 11.jpg
-- Reconstruction of double slit - 8.jpg
-- 
-- Fourier Transform of mesh - 16.jpg
-- Reconstruction of mesh - 20.jpg
-- Mesh, but we only let the central vertical set of dots pass through - 21.jpg
-- 
-- VH fourier transform - 2.jpg
-- VH with center blocked (only high frequency features visible) - 6.jpg
-- VH with horizontal wire as filter (vertical features blocked) - 7.jpg
--->
-
 - **Tuesday**
   - Last week we had started experimenting with the new filters we got. Today we started doing the same in a more organised manner. We took a lot of photos. Here are some of the photos which came good.
     - fourier transform of pin hole

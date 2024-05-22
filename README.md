@@ -1,11 +1,2 @@
-# Updates of our OpenLab Experiments
-
-## Sem 7
-
-- [Optical Fiber](./OpticalFiber) (before midsem)
-- [Fourier Optics](./FourierOptics) (after midsem)
-
-## Sem 8
-
-- [C-V Profiling](./cv_profiling/CV_Profiling.pdf) (before midsem)
-<!-- - [Fourier Optics](./FourierOptics) (after midsem) -->
+# Propellor Efficiency Test
+By Aritra Mukhopadhyay as a part of Open Lab Project (Physics) Academic Year 2023-24
